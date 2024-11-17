@@ -6,21 +6,25 @@
 \usepackage{fontspec, unicode-math}
 \usepackage{graphicx}
 \usepackage{siunitx}  %\SI{10}{\hertz} % print "10Hz" % \SIrange{10}{100}{\hertz} % print "10Hz to 100Hz"
-\usepackage{keystroke} %\keystroke{Ctrl+C}
+%\usepackage{keystroke} %\keystroke{Ctrl+C}
 \usepackage{enumitem}
 \usepackage{tabu, multirow, colortbl, makecell, lscape, booktabs} %table
-\usepackage{chemfig} %chemical formula
+%\usepackage{chemfig} %chemical formula
 \usepackage[hidelinks]{hyperref} % this should come last of loaded packages, usually %https://tex.stackexchange.com/questions/1863/which-packages-should-be-loaded-after-hyperref-instead-of-before
 \geometry{a4paper, top=3.7cm, left=2.8cm, right=2.6cm, bottom=3.5cm}
+\graphicspath{{../Pic/}{../figures/}{../images/}}
 %\linespread{1}
 
-\setmathfont{latinmodern-math.otf}
-\setmainfont{Gentium Plus} %\usepackage{gentium} %\setmainfont{Gentium Book Plus}
+\setmainfont{Source Serif 4}
+\setsansfont{Source Sans 3}
 \setmonofont{Iosevka Fixed Slab}
 \setCJKmainfont{思源宋体 Light}[BoldFont=思源宋体 SemiBold, ItalicFont=FZKai-Z03]
 \setCJKsansfont{思源黑体 Light}[BoldFont=思源黑体 Medium]
 \setCJKmonofont{等距更纱黑体 Slab SC}
+\setmathfont{latinmodern-math.otf}
 
+\newfontfamily\gentium{Gentium Plus}
+\newfontfamily\genbook{Gentium Book Plus}
 \newCJKfontfamily\song{思源宋体 Light}[BoldFont=思源宋体 SemiBold]
 \newCJKfontfamily\xbs{思源宋体 ExtraLight} % 小标宋
 \newCJKfontfamily\bs{思源宋体} % 标宋
@@ -37,15 +41,15 @@
 %思源宋体ExtraLight Light 不填   Medium SemiBold Heavy
 %思源黑体ExtraLight Light Normal 不填   Medium   Heavy
 
-\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\ }
 \newcommand{\n}{\newline}
-\newcommand{\se}{\section}
-\newcommand{\subs}{\subsection}
-\newcommand{\subss}{\subsubsection}
-\newcommand{\para}{\paragraph}
-\newcommand{\spara}{\subparagraph}
 \newcommand{\pic}{\includegraphics[width = .8\textwidth]}
-\newcommand{\subsss}[1]{\paragraph{#1}\mbox{}\\ }
+%\newcommand{\se}{\section}                                     %bad
+%\newcommand{\subs}{\subsection}                                %for
+%\newcommand{\subss}{\subsubsection}                            %auto
+%\newcommand{\para}{\paragraph}                                 %structurer
+%\newcommand{\spara}{\subparagraph}                             %and
+%\newcommand{\subsss}[1]{\paragraph{#1}\mbox{}\\ }              %hyperref
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\ }
 \setcounter{secnumdepth}{4} %how many sectioning levels to assign numbers to
 \setcounter{tocdepth}{4} %how many sectioning levels to show in ToC
 
@@ -55,7 +59,7 @@
 \date{\today}
 \begin{document}
     \maketitle
-    phɑːnˈɛtɪks
+    {\gentium phɑːnˈɛtɪks}
     
     \href{www.example.com}{example\ website}
 
@@ -67,8 +71,8 @@
     \end{tabu}
 
     \SIrange{10}{100}{\hertz}
-    \keystroke{Ctrl+C}
-    \chemfig{CH_3-CH_2-CH_3}
+    %\keystroke{Ctrl+C}
+    %\chemfig{CH_3-CH_2-CH_3}
 
     $这是一个CJK公式测试^{测试}_{测试}$
     \[\oint_{x_0^1}^{\lnapprox \vartriangleright}\lll \ggg \therefore \because  \]
